@@ -4,8 +4,20 @@
     box-sizing: border-box;
 }
 
+
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
 .container{
     max-width: 1352px;
+    margin: 0 auto;
+}
+
+.container{
+    max-width: 1124px;
     margin: 0 auto;
 }
 
@@ -14,6 +26,7 @@ header {
     box-shadow: 0px 3px 6px #00000029;
     position: fixed;
     width: 100vw;
+    z-index: 3;
 }
 
 .page-header {
@@ -21,6 +34,7 @@ header {
     align-items: center;
     justify-content: space-between;
     width: 100%;
+
 }
 
 .page-header-logo {
@@ -124,27 +138,284 @@ main {
 
 .section2-content-box {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-evenly;
     width: 100%;
     height: 100%;
     padding-top: 100px;
+    padding-bottom: 140px;
 }
-.section2-box1 > div {
+.section2-box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 176px;
+}
+
+.section2-box > div {
+    width: 63px;
+    height: 63px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.section2-box > div > img {
+    position: absolute;
+    left: 25px;
+}
+
+.section2-content-box > div:nth-child(2) > div > img {
+    top: 15px;
+}
+.section2-content-box > div:nth-child(1) > div {
     background: #FB3B64 0% 0% no-repeat padding-box;
-    width: 63px;
-    height: 63px;
-    border-radius: 50%;
 }
-.section2-box2 > div {
+
+.section2-content-box > div:nth-child(2) > div {
     background: #08A6E4 0% 0% no-repeat padding-box;
-    width: 63px;
-    height: 63px;
-    border-radius: 50%;
 }
-.section2-box3 > div {
+
+.section2-content-box > div:nth-child(3) > div {
     background: #55DFB4 0% 0% no-repeat padding-box;
-    width: 63px;
-    height: 63px;
+}
+
+.section2-box > :nth-child(n) {
+    padding-top: 10px;
+    text-align: center;
+}
+.section2-box > p:nth-of-type(1) {
+    font-family: 'Raleway ExtraBold', sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000000;
+}
+
+.section2-box > p:nth-of-type(2) {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    color: #A5A5A5;
+}
+
+.section3 {
+    background: #F7F7F7 0% 0% no-repeat padding-box;
+    width: 100vw;
+}
+
+.section3-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 100px;
+
+}
+
+.section3-box1 {
+    background: #FFFFFF 0% 0% no-repeat;
+    border: 1px solid #E8E9ED;
+    border-radius: 5px;
+    position: relative;
+    height: 370px;
+    z-index: 0;
+    margin-bottom: 40px;
+}
+
+.section3-box1 > div {
+    transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
+    background: #FB3B64 0% 0% no-repeat padding-box;
+    border-radius: 41px;
+    width: 180px;
+    height: 180px;
+    display: block;
+    position: absolute;
+    top: 70px;
+    right: 80px;
+    z-index: 1;
+}
+
+.section3-box1  > img {
+    width: 400px;
+    z-index: 2;
+    position: absolute;
+    top: 100px;
+    right: 100px;
+    display: block;
+}
+
+.section3-box1 > h1{
+    padding-top: 100px;
+    padding-left: 36px;
+    text-align: left;
+    color: #000000;
+    font-family: 'Raleway', sans-serif;
+    font-size: 36px;
+    line-height: 43px;
+    width: 40%;
+}
+
+.section3-box1 > p {
+    padding-top: 40px;
+    width: 40%;
+    color: #000000;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    padding-left: 36px;
+
+}
+
+.section3-box1 > span {
+    background: #FB3B64 0% 0% no-repeat;
+    padding-left: 36px;
+    width: 280px;
+    height: 2px;
+    display: block;
+    position: absolute;
+    top: 280px;
+    left: 36px;
+    z-index: 1;
+}
+
+
+.section3-box2 {
+    background: #FFFFFF 0% 0% no-repeat;
+    border: 1px solid #E8E9ED;
+    border-radius: 5px;
+    position: relative;
+    height: 370px;
+    width: 100%;
+    z-index: 0;
+    margin-bottom: 40px;
+}
+
+.section3-box2 > div {
+    background: #07ACE6 0% 0% no-repeat padding-box;
     border-radius: 50%;
+    width: 320px;
+    height: 320px;
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 70px;
+    z-index: 1;
+
+}
+
+.section3-box2  > img {
+    width: 400px;
+    z-index: 2;
+    position: absolute;
+    top: 40px;
+    left: 70px;
+    display: block;
+
+}
+
+.section3-box2 > h1{
+    padding-top: 50px;
+    padding-right: 180px;
+    text-align: left;
+    color: #000000;
+    font-family: 'Raleway', sans-serif;
+    font-size: 36px;
+    line-height: 43px;
+    width: 40%;
+    float: right;
+}
+
+.section3-box2 > p {
+    color: #000000;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: left;
+    width: 40%;
+    float: right;
+    position: absolute;
+    right: 0px;
+    padding-top: 180px;
+    padding-right: 20px;
+}
+
+.section3-box2 > span {
+    background: #07ACE6 0% 0% no-repeat padding-box;
+    padding-left: 36px;
+    width: 280px;
+    height: 2px;
+    display: block;
+    position: absolute;
+    top: 280px;
+    right: 170px;
+    z-index: 1;
+}
+
+.section3-box3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.section3-box3-1 {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    border: 1px solid #E8E9ED;
+    border-radius: 5px;
+    height: 370px;
+    width: 55%;
+    margin-right: 5%;
+    position: relative;
+}
+
+.section3-box3-2 {
+    background: #55DFB4 0% 0% no-repeat padding-box;
+    border: 1px solid #E8E9ED;
+    border-radius: 5px;
+    height: 370px;
+    width: 40%;
+    position: relative;
+}
+
+.section3-box3-2 > img {
+    width: 300px;
+    top: 100px;
+    left: 50px;
+    position: absolute;
+}
+
+.section3-box3-1 > h1{
+    padding-top: 50px;
+    padding-left: 36px;
+    text-align: left;
+    color: #000000;
+    font-family: 'Raleway', sans-serif;
+    font-size: 36px;
+    line-height: 43px;
+    width: 70%;
+}
+
+.section3-box3-1 > p {
+    padding-top: 40px;
+    width: 100%;
+    color: #000000;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    padding-left: 36px;
+
+}
+
+.section3-box3-1 > span {
+    background: #55DFB4 0% 0% no-repeat padding-box;
+    padding-left: 36px;
+    width: 280px;
+    height: 2px;
+    display: block;
+    position: absolute;
+    top: 280px;
+    left: 36px;
+    z-index: 1;
 }
