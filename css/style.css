@@ -216,39 +216,42 @@ main {
     justify-content: center;
     flex-direction: column;
     width: 100%;
-    padding-top: 100px;
+    padding-top: 40px;
 }
 
 .section3-box1 {
     background: #FFFFFF 0% 0% no-repeat;
     border: 1px solid #E8E9ED;
     border-radius: 5px;
-    position: relative;
-    height: 370px;
+    min-height: 370px;
     z-index: 0;
     margin-bottom: 40px;
 }
 
-.section3-box1 > div {
+.section3-box1 > section {
+    /*position: relative;*/
+    width: 40%;
+    float: right;
+}
+
+.section3-box1 > section > div {
     transform: matrix(0.71, 0.71, -0.71, 0.71, 0, 0);
     background: #FB3B64 0% 0% no-repeat padding-box;
     border-radius: 41px;
     width: 180px;
     height: 180px;
-    display: block;
-    position: absolute;
+    position: relative;
     top: 70px;
-    right: 80px;
+    left: 150px;
     z-index: 1;
 }
 
-.section3-box1  > img {
-    width: 400px;
+.section3-box1 >section > img {
+    max-width: 400px;
     z-index: 2;
-    position: absolute;
-    top: 100px;
+    position: relative  ;
+    bottom: 50px;
     right: 100px;
-    display: block;
 }
 
 .section3-box1 > h1{
@@ -275,14 +278,12 @@ main {
 
 .section3-box1 > span {
     background: #FB3B64 0% 0% no-repeat;
-    padding-left: 36px;
+    margin-left: 36px;
     width: 280px;
     height: 2px;
-    display: block;
-    position: absolute;
-    top: 280px;
-    left: 36px;
-    z-index: 1;
+    display: inline-block;
+    margin-top: 30px;
+    margin-bottom: 70px;
 }
 
 
@@ -290,37 +291,40 @@ main {
     background: #FFFFFF 0% 0% no-repeat;
     border: 1px solid #E8E9ED;
     border-radius: 5px;
-    position: relative;
-    height: 370px;
+    min-height: 370px;
     width: 100%;
-    z-index: 0;
     margin-bottom: 40px;
 }
 
-.section3-box2 > div {
+.section3-box2 > section:first-child {
+    position: relative;
+    width: 40%;
+    float: left;
+    padding: 40px;
+}
+
+.section3-box2 > section:last-child {
+    width: 50%;
+    float: right;
+    padding: 40px;
+}
+
+.section3-box2 > section > div {
     background: #07ACE6 0% 0% no-repeat padding-box;
     border-radius: 50%;
     width: 320px;
     height: 320px;
-    display: block;
     position: absolute;
-    top: 20px;
-    left: 70px;
     z-index: 1;
-
 }
 
-.section3-box2  > img {
+.section3-box2 > section > img {
     width: 400px;
     z-index: 2;
-    position: absolute;
-    top: 40px;
-    left: 70px;
-    display: block;
-
+    position: absolute  ;
 }
 
-.section3-box2 > h1{
+.section3-box2 > section > h1{
     padding-top: 50px;
     padding-right: 180px;
     text-align: left;
@@ -328,34 +332,24 @@ main {
     font-family: 'Raleway', sans-serif;
     font-size: 36px;
     line-height: 43px;
-    width: 40%;
-    float: right;
 }
 
-.section3-box2 > p {
+.section3-box2 > section > p {
     color: #000000;
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     line-height: 22px;
     text-align: left;
-    width: 40%;
-    float: right;
-    position: absolute;
-    right: 0px;
-    padding-top: 180px;
-    padding-right: 20px;
+    padding-top: 40px;
 }
 
-.section3-box2 > span {
+.section3-box2 > section > span {
     background: #07ACE6 0% 0% no-repeat padding-box;
-    padding-left: 36px;
     width: 280px;
     height: 2px;
-    display: block;
-    position: absolute;
-    top: 280px;
-    right: 170px;
-    z-index: 1;
+    display: inline-block;
+    margin-top: 30px;
+    margin-bottom: 70px;
 }
 
 .section3-box3 {
@@ -370,7 +364,7 @@ main {
     background: #FFFFFF 0% 0% no-repeat padding-box;
     border: 1px solid #E8E9ED;
     border-radius: 5px;
-    height: 370px;
+    min-height: 370px;
     width: 55%;
     margin-right: 5%;
     position: relative;
@@ -380,7 +374,7 @@ main {
     background: #55DFB4 0% 0% no-repeat padding-box;
     border: 1px solid #E8E9ED;
     border-radius: 5px;
-    height: 370px;
+    min-height: 370px;
     width: 40%;
     position: relative;
 }
@@ -416,14 +410,13 @@ main {
 
 .section3-box3-1 > span {
     background: #55DFB4 0% 0% no-repeat padding-box;
-    padding-left: 36px;
+    margin-left: 36px;
     width: 280px;
     height: 2px;
-    display: block;
-    position: absolute;
-    top: 280px;
-    left: 36px;
-    z-index: 1;
+    display: inline-block;
+    margin-top: 30px;
+    margin-bottom: 70px;
+
 }
 
 .section4 {
@@ -620,12 +613,9 @@ main {
     width: 30%;
 }
 
-.section5-form :nth-child(n) {
-    display: block;
-}
-
-.section5-form input:nth-of-type(1), .section5-form input:nth-of-type(2) {
+.section5-form > form > input {
     width: 100%;
+    display: block;
     margin-bottom: 20px;
     margin-top: 15px;
     border: none;
@@ -635,19 +625,73 @@ main {
     line-height: 15px;
 }
 
-.section5-form input:nth-of-type(2) {
-    margin-bottom: 30px;
+.section5-checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
-.section5-form > form > input:nth-of-type(3) {
-    float: left;
-    /*margin-right: 10px;*/
-    background: #FFFFFF 0% 0% no-repeat padding-box;
+.section5-checkbox > input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    top: 30px;
+    left: 0px;
+    height: 24px;
+    width: 24px;
+    z-index: 1;
+}
+
+.section5-checkbox-thick {
+    position: absolute;
     border: 1px solid #95989A;
     border-radius: 4px;
+    top: 30px;
+    left: 0px;
+    height: 24px;
     width: 24px;
-    height:24px;
+    background-color: #FFFFFF;
+}
 
+/* On mouse-over, add a grey background color */
+.section5-checkbox:hover input ~ .section5-checkbox-thick {
+    background-color:  #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.section5-checkbox input:checked ~ .section5-checkbox-thick {
+    background-color: #08A6E4;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.section5-checkbox-thick:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.section5-checkbox input:checked ~ .section5-checkbox-thick:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.section5-checkbox .section5-checkbox-thick:after {
+    left: 8px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 
 .section5-form > form > p {
@@ -656,8 +700,8 @@ main {
     line-height: 17px;
     letter-spacing: 0;
     color: #707070;
-    padding-left: 30px;
-
+    padding-left: 40px;
+    padding-top: 30px;
 }
 
 .section5-form > form > label {
@@ -667,6 +711,7 @@ main {
     font-family: 'Open Sans Bold', sans-serif;
     font-size: 11px;
     line-height: 15px;
+    display: block;
 }
 
 .section5-form > form > button {
