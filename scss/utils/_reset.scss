@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+}
+
+.pl-30{
+    padding-left: 30px;
+}
+
+.pr-30{
+    padding-right: 30px;
+}
+
+.container {
+    max-width: 1352px;
+    margin: 0 auto;
+}
+
+.container2{
+    max-width: 1124px;
+    margin: 0 auto;
+}
+
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}

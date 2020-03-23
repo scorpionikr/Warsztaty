@@ -1,0 +1,37 @@
+//Czcionki i ikony
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css');
+
+//Zmienne poczatkowe
+
+@import './utils/vars';
+@import './utils/reset';
+@import './utils/components';
+
+//navigacja
+
+.list__navigation {
+    @media screen and (min-width: 768px){
+        display: block;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .hamburger {
+        display: none;
+    }
+}
+
+// Desktop
+
+@import './elements/navigation/large';
+@import './elements/main/large';
+
+//Mbbile
+
+@media screen and (max-width: 768px){
+    @import './elements/navigation/mobile';
+    @import './elements/main/mobile';
+}

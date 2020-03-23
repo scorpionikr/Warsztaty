@@ -1,0 +1,47 @@
+
+header {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    position: fixed;
+    width: 100vw;
+    z-index: 3;
+}
+
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.page-header-logo {
+    text-align: left;
+    font-size: 32px;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 0;
+    color: #08A6E4;
+    padding: 20px 8px;
+}
+.list__navigation{
+    padding: 28px 8px;
+
+}
+
+.list__navigation > li {
+    display: inline;
+    padding: 0px 28px;
+}
+
+.list__navigation li > a {
+    color: #000000;
+    font-family: 'Open Sans Bold', sans-serif;
+    font-size: 15px;
+    letter-spacing: 3.28px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.list__navigation > li > a:hover {
+    padding-bottom: 25px;
+    border-bottom: 4px solid #08A6E4;
+}
