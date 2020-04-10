@@ -1,5 +1,9 @@
 .section1 {
   height: 500px;
+
+  .section1-content >button {
+    width: 90vw;
+  }
 }
 
 .section2 {
@@ -44,7 +48,7 @@
 
 
 .section3-box1 {
-
+  width: 100vw;
 }
 
 .section3-box1 {
@@ -53,7 +57,9 @@
   flex-direction: column;
   min-height: initial;
     > section {
+      width: 90vw;
     transform: scale(0.8);
+     align-self: center;
     }
   > h1{
     padding-top: 10px;
@@ -77,10 +83,13 @@
 .section3-box2 {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: column;
   min-height: initial;
-   section:first-child {
+
+    section:first-child {
+      width: 70%;
+      align-self: center;
     transform: scale(0.8) translate(-50%, 0);
   }
    section:last-child {
